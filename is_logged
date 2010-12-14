@@ -1,0 +1,9 @@
+#!/bin/bash
+echo Czy $1 jest zalogowany?
+x=`last -200 $1 | grep "still logged in" | wc -l`
+if [ $x -gt 0 ]
+then
+echo Tak
+else
+echo Nie
+fi

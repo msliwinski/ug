@@ -1,0 +1,18 @@
+[msliwinski@sigma srod_prog]$ echo "Ala ma kota. Kot ma Ale." | sed -e 's/./!/'
+!la ma kota. Kot ma Ale.
+- tu sed zmienia pierwszy napotkany znak na znak !
+
+[msliwinski@sigma srod_prog]$ echo "Ala ma kota. Kot ma Ale." | sed -e 's/\./!/'
+Ala ma kota! Kot ma Ale.
+- tu sed zmienia pierwszy napotkany znak . na znak !
+
+[msliwinski@sigma srod_prog]$ echo "Ala ma kota. Kot ma Ale." | sed -e 's/./!/g'
+!!!!!!!!!!!!!!!!!!!!!!!!
+- tu sed zmienia wszystkie znaki na znaki ! gdyz dodany jest na koncu parametr g ktory 
+oznacza by wykonac to dla calej zawartosci
+
+[msliwinski@sigma srod_prog]$ echo "Ala ma kota. Kot ma Ale." | sed -e 's/\./!/g'
+Ala ma kota! Kot ma Ale!
+- tu sed zmienia wszystki napotkane znaki kropek na znak ! gdyz jest zdefiniowany znak 
+kropki i dadano parametr g
+
